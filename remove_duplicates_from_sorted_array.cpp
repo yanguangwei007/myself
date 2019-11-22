@@ -4,12 +4,11 @@ public:
         if(!nums.size())
             return 0;
         int i = 0;
-        int j = 1;
-        while(i < nums.size() - 1 && j < nums.size()){
+        for(int j = 1; j < nums.size(); j ++){
             if(nums[i] == nums[j])
-                j ++;
+                continue;
             else
-                nums[++i] = nums[j++];
+                nums[++i] = nums[j];
         }
         return i + 1;
     }
